@@ -1,0 +1,3 @@
+exec picom
+exec slstatus
+wal -i $HOME/.wallpapers/2bit-klk-01.png
