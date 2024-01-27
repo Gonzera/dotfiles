@@ -73,7 +73,8 @@ return packer.startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     use { "windwp/nvim-autopairs", config = get_setup("autopairs") }
     use 'andweeb/presence.nvim'
-    use { 'github/copilot.vim' }
+    -- use { 'github/copilot.vim' }
+    -- use { 'linux-cultist/venv-selector.nvim' }
     -- treesitter
     use { 'nvim-treesitter/nvim-treesitter', config = get_setup('nvim-treesitter') }
 
@@ -110,6 +111,9 @@ return packer.startup(function(use)
     use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
+    -- Debugger
+    use 'mfussenegger/nvim-dap'
+
     -- Comment
     use {
         'numToStr/Comment.nvim',
@@ -117,6 +121,7 @@ return packer.startup(function(use)
             require('Comment').setup()
         end
     }
+    use 'slint-ui/vim-slint'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

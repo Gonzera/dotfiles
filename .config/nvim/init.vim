@@ -7,6 +7,7 @@ lua require "lsp"
 inoremap jj <esc>
 set number
 set relativenumber
+set clipboard=unnamedplus
 
 set expandtab
 set tabstop=4
@@ -26,8 +27,8 @@ highlight LineNr ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE 
 
 " Remap github copilot
-lua vim.g.copilot_no_tab_map = true
-lua vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+" lua vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+" lua vim.g.copilot_no_tab_map = true
 
 
 " Floaterm config 

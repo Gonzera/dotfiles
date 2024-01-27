@@ -5,7 +5,8 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "eslint", "clangd", "sumneko_lua", "pyright", "rust_analyzer", "omnisharp" }
+-- local servers = { "jsonls", "eslint", "clangd", "lua_ls", "pyright", "rust_analyzer", "omnisharp" }
+local servers = { "tsserver", "omnisharp", "lua_ls","clangd", "pyright", "rust_analyzer", "csharp_ls" }
 
 lsp_installer.setup {
     ensure_installed = servers
@@ -22,3 +23,4 @@ for _, server in pairs(servers) do
     end
     lspconfig[server].setup(opts)
 end
+

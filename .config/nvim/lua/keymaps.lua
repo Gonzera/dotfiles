@@ -3,9 +3,14 @@ local opts = { noremap = true, silent = true }
 -- Shorten function name
 local map = vim.api.nvim_set_keymap
 
+-- Set leader to space
+vim.g.mapleader = " "
+
+
 -- Buffer navigation
-map("n", "<S-l>", ":bnext<CR>", opts)
-map("n", "<S-h>", ":bprevious<CR>", opts)
+map("n", "<S-l>", "<Plug>(cokeline-focus-next)", opts)
+map("n", "<S-h>", "<Plug>(cokeline-focus-prev)", opts)
+map("n", "<leader>q", ":bd<CR>", opts)
 
 -- Move text
 map("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
